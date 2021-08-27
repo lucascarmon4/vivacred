@@ -1,0 +1,146 @@
+@font-face {
+    font-family: montserrat;
+    src: url('/assets/fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: cocogoose;
+    src: url('/assets/fonts/Cocogoose.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 160px;
+    background-color: #FFFFFF;
+    line-height: 10px;
+
+}
+
+.header-logo {
+    width: 190px;
+    height: 45px;
+    margin-top: 10px;
+}
+
+.header-ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.header-ul a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+.header-ul a:after {
+    content: "";
+    position: absolute;
+    background-color: #FF0000;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 350ms all;
+}
+
+.header-ul a:hover:after {
+    width: 100%;
+}
+
+.header-li {
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: montserrat;
+    transition: 400ms all;
+}
+
+.header-li:hover {
+    color: #FF0000;
+}
+
+.header-li--contato {
+    color: #FFFFFF;
+    background-color: #FF0000;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+.header-li--contato:hover {
+    color: #FFFFFF;
+}
+
+
+.header-li_selected {
+    color: #FF0000;
+    border-bottom: 1px solid #FF0000;
+}
+
+.banner {
+    height: 550px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.048);
+}
+
+.banner-titulo {
+    font-family: cocogoose;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.banner-info {
+    margin-left: 150px;
+}
+
+.banner-p {
+    margin-top: 20px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner-botao {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    font-family: cocogoose;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    height: 45px;
+    width: 280px;
+    background-color: #FF0000;
+    transition: 300ms all;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.banner-botao:hover {
+    background-color: #f05d5d;
+}
+
+.banner-img {
+    width: 600px;
+    height: 600px;
+    margin-right: 50px;
+}
+
