@@ -10,6 +10,27 @@
     font-family: aspas;
     src: url('/assets/fonts/Lemon\ Brownies.ttf');
 }
+@font-face {
+    font-family: os-light;
+    src: url('/assets/fonts/OpenSans-Light.ttf');
+}
+@font-face {
+    font-family: os-regular;
+    src: url('/assets/fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: os-italic;
+    src: url('/assets/fonts/OpenSans-Italic.ttf');
+}
+@font-face {
+    font-family: os-titulo;
+    src: url('/assets/fonts/OpenSans-Bold.ttf');
+}
+@font-face {
+    font-family: montserrat-light;
+    src: url('/assets/fonts/Montserrat-Light.ttf');
+}
+
 
 
 * {
@@ -123,7 +144,7 @@ header {
 .banner-p {
     margin-top: 20px;
     font-size: 22px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: os-regular;
 }
 
 .banner-botao {
@@ -169,11 +190,13 @@ header {
 }
 
 .servicos-titulo {
-    font-family: cocogoose;
-    font-size: 35px;
+    font-family: os-titulo;
+    color: #050336;
+    font-size: 40px;
     margin-bottom: 50px;
     margin-top: 70px;
     margin-right: 70px;
+    font-weight: bold;
 }
 
 .servicos-img {
@@ -201,7 +224,7 @@ header {
     max-width: 300px;
     border-radius: 15px;
     height: 200px;
-    transition: all 300ms;
+    transition: all 200ms;
 }
 
 .servicos-card:hover {
@@ -214,7 +237,7 @@ header {
 }
 
 .s-card-p {
-    font-family: montserrat;
+    font-family: os-light;
 }
 
 .qs {
@@ -226,9 +249,10 @@ header {
 }
 
 .qs-titulo {
-    font-family: cocogoose;
+    font-family: os-titulo;
+    color: #050336;
+    font-size: 40px;
     text-align: left;
-    font-size: 35px;
 }
 
 .qs-text { 
@@ -254,16 +278,19 @@ header {
 
 .avaliacoes {
     display: flex;
-    padding-top: 50px;
+    padding-top: 70px;
+    padding-bottom: 70px;
     justify-content: space-around;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.048);
 }
 
 .avaliacoes-titulo {
-    font-family: cocogoose;
-    font-size: 35px;
+    font-family: os-titulo;
+    color: #050336;
+    font-size: 40px;
     margin-bottom: 50px;
     padding-left: 200px;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 .av-cards {
@@ -282,6 +309,7 @@ header {
     border: 1px solid rgba(0, 0, 0, 0.103);
     border-radius: 10px;
     position: relative;
+    transition: 200ms all;
 }
 
 .av-card:hover {
@@ -313,7 +341,7 @@ header {
 }
 
 .av-card-text {
-    font-family: montserrat;
+    font-family: os-light;
     font-size: 15px;
 }
 
@@ -350,12 +378,260 @@ header {
     text-align: center;
     font-family: cocogoose;
     text-transform: uppercase;
-    margin-top: 290px;
+    margin-top: 300px;
     margin-left: 450px;
     cursor: pointer;
     transition: 300ms all ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.425);
+}
+
+.av-botao--link {
+    text-decoration: none;
 }
 
 .av-botao:hover {
     background-color: #eb4d4b;
+}
+
+.contato {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+}
+
+.ctt-left{
+    margin-left: 150px;
+}
+
+.ctt-right {
+    margin-right: 100px;
+}
+
+.ctt-titulo {
+    font-family: os-titulo;
+    color: #050336;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.ctt-adress {
+    font-family: os-italic;
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.808);
+}
+
+.ctt-adress::before {
+    background-image: url('/assets/img/Contato/flat-icon.gif');
+    background-size: 15px 15px;
+    display: inline-block;
+    width: 15px; 
+    height: 15px;
+    content:"";
+    margin-right: 8px;
+}
+
+.ctt-phone {
+    font-family: os-regular;
+    margin-top: 3px;
+    color: rgba(0, 0, 0, 0.808);
+
+}
+
+.ctt-phone::before {
+    background-image: url('/assets/img/Contato/telefone.gif');
+    background-size: 15px 15px;
+    display: inline-block;
+    width: 15px; 
+    height: 15px;
+    content:"";
+    margin-right: 6px;
+}
+
+.ctt-horario--titulo {
+    font-family: cocogoose;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.ctt-legend {
+    font-family: os-regular;
+    color: rgba(0, 0, 0, 0.808);
+}
+
+.ctt-legend::before {
+    background-image: url('/assets/img/Contato/relogio.gif');
+    background-size: 13px 13px;
+    display: inline-block;
+    width: 13px; 
+    height: 13px;
+    content:"";
+    margin-right: 8px;
+}
+
+.ctt-img{
+    width: 500px;
+    margin-top: 40px;
+}
+
+.contato2 {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.048);
+}
+
+.ctt2-left {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin-left: 140px;
+
+}
+
+.ctt2-img {
+    width: 600px;
+    margin-bottom: 10px;
+}
+
+.ctt2-redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ctt2-redes--link {
+    text-decoration: none;
+}
+
+.rede { 
+    line-height: 10px;
+    margin-top: 10px;
+    color: #FFFFFF;
+    background-color: #FF0000;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 130px;
+    text-align: center;
+    font-family: cocogoose;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 300ms all ease-in-out;
+}
+
+.rede:hover {
+    background-color: #eb4d4b;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 22px 22px 8px 22px ;
+    width: 480px;
+
+}
+
+.form-titulo {
+    font-family: cocogoose;
+    color: #050336;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.ctt2-form {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.178);
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.103);
+    padding-top: 40px;
+    margin-right: 160px;
+
+}
+
+.form-label {
+    font-family: cocogoose;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    font-family: os-light;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    outline: 0;
+    border: 1px solid black;
+    font-size: 17px;
+
+}
+
+.form-input::placeholder {
+    color: rgba(0, 0, 0, 0.575);
+    font-size: 17px;
+    font-family: os-light;
+}
+
+.cpf-phone {
+    display: flex;
+}
+
+.div-cpf, .div-phone {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+
+.div-phone {
+    margin-left: 2%;
+}
+
+.mensagem-input {
+    resize: none;
+}
+
+.form-botao {
+    font-size: 20px;
+    line-height: 10px;
+    color: #FFFFFF;
+    background-color: #FF0000;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 40%;
+    text-align: center;
+    font-family: cocogoose;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 200ms all ease-in-out;
+    margin: 20px auto 0 auto; 
+    outline: 0;
+    border: none;
+}
+
+.form-botao:hover {
+    background-color: #eb4d4b;
+}
+
+.bancos {
+    display: flex;
+    padding-top: 60px;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.bancos-titulo {
+    margin-bottom: 60px;
+    font-family: cocogoose;
+    font-size: 37px;
+    text-transform: uppercase;
+}
+
+.banco {
+    width: 290px;
+    border-radius: 10px;
 }
