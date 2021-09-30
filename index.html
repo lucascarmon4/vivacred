@@ -5,17 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/uicons-regular-rounded.css">
     <title>Viva Cred - Empréstimos consignados</title>
 </head>
 <body>
-    <header>
+
+    <header id="header">
         <a href=""><img src="/assets/img/logo2.png" alt="" class="header-logo"></a>
         <nav class="header-nav">
             <ul class="header-ul">
-                <a href="/"><li class="header-li">home</li></a>
-                <a href="/"><li class="header-li">serviços</li></a>
-                <a href="/"><li class="header-li">sobre</li></a>
-                <a href="/"><li class="header-li" id="header-li--contato">contato</li></a>
+                <a href="index.html"><li class="header-li">home</li></a>
+                <a href="#servicos"><li class="header-li">serviços</li></a>
+                <a href="#sobre"><li class="header-li">sobre</li></a>
+                <a href="#contato"><li class="header-li" id="header-li--contato">contato</li></a>
             </ul>
         </nav>
     </header>
@@ -24,11 +26,11 @@
             <div class="banner-info">
                 <h1 class="banner-titulo">Empréstimo rápido, <br> seguro e muito fácil!</h1>
                 <p class="banner-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro <br>quia soluta quo inventore! Atque a omnis vero, error rerum <br> culpa dignissimos porro, eveniet amet nam.</p>
-                <a href=""><div class="banner-botao">Solicitar empréstimo</div></a>
+                <a href="http://api.whatsapp.com/send?phone=5513997121143" target="_BLANK"><div class="banner-botao">Solicitar empréstimo</div></a>
             </div>
             <img src="/assets/img/banner.gif" alt="" class="banner-img">
         </section>
-        <section class="servicos">
+        <section class="servicos" id="servicos">
             <img src="/assets/img/servicos.png" alt="" class="servicos-img">
             <div class="servicos-info">
                 <h1 class="servicos-titulo">Nossos serviços</h1>
@@ -66,7 +68,7 @@
                 </div>
             </div>
         </section>
-        <section class="qs">
+        <section class="qs" id="sobre">
             <div class="qs-text">
                 <h1 class="qs-titulo">Quem somos?</h1>
                 <p class="qs-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut tempora at incidunt rerum est quia, harum nobis mollitia vero iste veniam dicta, architecto quos quis quas corrupti alias ullam magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci, porro, autem alias a necessitatibus sequi doloremque officia natus earum esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci, porro, autem alias a necessitatibus sequi doloremque officia natus earum esse.</p>
@@ -141,10 +143,10 @@
             </div>    
 
         </section>
-        <section class="contato">
+        <section class="contato" id="contato">
             <div class="ctt-left">
                 <h1 class="ctt-titulo">Contato</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.0278517267743!2d-46.49251558444486!3d-24.030082984954635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1f09c88c9345%3A0x4eb3b1fe6a6b7edf!2sViva%20Cred!5e0!3m2!1spt-BR!2sbr!4v1630324493438!5m2!1spt-BR!2sbr" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.0278517267743!2d-46.49251558444486!3d-24.030082984954635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1f09c88c9345%3A0x4eb3b1fe6a6b7edf!2sViva%20Cred!5e0!3m2!1spt-BR!2sbr!4v1630324493438!5m2!1spt-BR!2sbr" width="540" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 <p class="ctt-adress">Av. Presidente Kennedy, 8.579 - Vila Mirim / PG</p>
                 <p class="ctt-phone">(13) 99625-1308</p>
                 <h2 class="ctt-horario--titulo">Horário de atendimento</h2>
@@ -166,34 +168,96 @@
             </div>
             <div class="ctt2-form">
                 <h1 class="form-titulo">fale conosco</h1>
-                <form action="" class="form">
-                    <label for="nome" class="form-label">NOME</label>
-                    <input name="nome" type="text" class="form-input" placeholder="">
+                <form class="form" action="https://api.staticforms.xyz/submit" method="post">
+                    <input type="hidden" name="accessKey" value="48e403bd-0669-4628-b4b1-0eba8e9e7993">
+                    <input type="hidden" name="subject" value="Contato via site - VivaCred"/>
+                    <input type="hidden" name="redirectTo" value="">
+
+                    <label for="name" class="form-label">NOME</label>
+                    <input placeholder="Digite seu nome" id="nome" name="name" type="text" class="form-input" placeholder="">
                     <div class="cpf-phone">
                         <div class="div-cpf">
-                            <label for="cpf" class="form-label cpf-phone--label">CPF</label>
-                            <input name="cpf" type="text" class="form-input cpf-phone--input" placeholder="000.000.000-00">
+                            <label for="$cpf" class="form-label cpf-phone--label">CPF</label>
+                            <input id="cpf" name="$cpf" type="text" class="form-input cpf-phone--input" placeholder="000.000.000-00" data-mask="000.000.000-00">
                         </div>
                         <div class="div-phone">
-                            <label for="telefone" class="form-label cpf-phone--label">TELEFONE</label>
-                            <input name="telefone" type="text" class="form-input cpf-phone--input" placeholder="(00) 00000-0000">
+                            <label for="phone" class="form-label cpf-phone--label">TELEFONE</label>
+                            <input id="telefone" name="phone" type="text" class="form-input cpf-phone--input" placeholder="(00) 00000-0000" data-mask="(00) 00000-0000">
                         </div>
                     </div>
                     <label for="email" class="form-label">EMAIL</label>
-                    <input name="email" type="text" class="form-input" placeholder="exemplo@gmail.com">
-                    <label for="mensagem" class="form-label mensagem">MENSAGEM</label>
-                    <textarea name="mensagem" id="" cols="30" rows="10" class="form-input mensagem-input" placeholder="Digite sua mensagem"></textarea>
-                    <button type="submit" class="form-botao">Enviar</button>
+                    <input id="email" name="email" type="text" class="form-input" placeholder="exemplo@gmail.com">
+                    <label for="subject" class="form-label mensagem">MENSAGEM</label>
+                    <textarea id="mensagem" name="message" id="" cols="30" rows="10" class="form-input mensagem-input" placeholder="Digite sua mensagem"></textarea>
+                    <input type="text" name="honeypot" style="display: none;">
+                    <button id="submit-botao" type="submit" class="form-botao">Enviar</button>
                 </form>
             </div>
         </section>
         <section class="bancos">
-            <h1 class="bancos-titulo">bancos parceiros</h1>
-            <div class="bancos-imgs">
-                <img src="/assets/img/bancos/bradescofin.jpg" alt="" class="banco">
-                <img src="/assets/img/bancos/daycoval.jpeg" alt="" class="banco">
+
+        </section>
+        <section class="duvidas">
+            <h1 class="duvidas-title">Dúvidas frequentes</h1>
+            <div class="duvidas-card">
+                <div class="duvidas-card_top">
+                    <h1 class="duvidas-pergunta"> Qual valor do nao sei oq?</h1>
+                    <img src="/assets/img/fi-rr-angle-small-down.svg" alt="" class="duvidas-arrow">
+                </div>
+                <p class="duvidas-resposta hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam corrupti amet vitae voluptatum autem nam inventore similique blanditiis, hic illo, nobis perspiciatis! Sint magnam quisquam optio commodi vitae amet.</p>
+            </div>
+            <div class="duvidas-card">
+                <div class="duvidas-card_top">
+                    <h1 class="duvidas-pergunta"> Tudo bem?</h1>
+                    <img src="/assets/img/fi-rr-angle-small-down.svg" alt="" class="duvidas-arrow">
+                </div>
+                <p class="duvidas-resposta  hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam corrupti amet vitae voluptatum autem nam inventore similique blanditiis, hic illo, nobis perspiciatis! Sint magnam quisquam optio commodi vitae amet.</p>
+            </div>
+            <div class="duvidas-card">
+                <div class="duvidas-card_top">
+                    <h1 class="duvidas-pergunta"> Tudo bem?</h1>
+                    <img src="/assets/img/fi-rr-angle-small-down.svg" alt="" class="duvidas-arrow">
+                </div>
+                <p class="duvidas-resposta  hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam corrupti amet vitae voluptatum autem nam inventore similique blanditiis, hic illo, nobis perspiciatis! Sint magnam quisquam optio commodi vitae amet.</p>
+            </div>
+            <div class="duvidas-card">
+                <div class="duvidas-card_top">
+                    <h1 class="duvidas-pergunta"> Tudo bem?</h1>
+                    <img src="/assets/img/fi-rr-angle-small-down.svg" alt="" class="duvidas-arrow">
+                </div>
+                <p class="duvidas-resposta  hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam corrupti amet vitae voluptatum autem nam inventore similique blanditiis, hic illo, nobis perspiciatis! Sint magnam quisquam optio commodi vitae amet.</p>
+            </div>
+            <div class="duvidas-card">
+                <div class="duvidas-card_top">
+                    <h1 class="duvidas-pergunta"> Tudo bem?</h1>
+                    <img src="/assets/img/fi-rr-angle-small-down.svg" alt="" class="duvidas-arrow">
+                </div>
+                <p class="duvidas-resposta  hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam corrupti amet vitae voluptatum autem nam inventore similique blanditiis, hic illo, nobis perspiciatis! Sint magnam quisquam optio commodi vitae amet.</p>
             </div>
         </section>
+        <footer></footer>
     </main>
+    <button class="scrollTop">
+        <img src="/assets/img/arrow-up-solid.svg" alt="">
+    </button>
+    <script>
+        let scroll = document.querySelector('.scrollTop');
+        window.addEventListener("scroll", function() {
+            scroll.classList.toggle('active', window.scrollY > 680);
+        })
+        function backTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
+        scroll.addEventListener("click", backTop);
+    </script>
 </body>
+<script src="/assets/script/smoothScroll.js"></script>
+<script src="/assets/script/form.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+<script src="/assets/script/formMask.js"></script>
+<script src="/assets/script/duvidas.js"></script>
+
 </html>

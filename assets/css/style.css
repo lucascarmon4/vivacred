@@ -23,12 +23,16 @@
     src: url('/assets/fonts/OpenSans-Italic.ttf');
 }
 @font-face {
-    font-family: os-titulo;
-    src: url('/assets/fonts/OpenSans-Bold.ttf');
-}
-@font-face {
     font-family: montserrat-light;
     src: url('/assets/fonts/Montserrat-Light.ttf');
+}
+@font-face {
+    font-family: inter;
+    src: url('/assets/fonts/Inter-Black.ttf');
+}
+@font-face {
+    font-family: inter-bold;
+    src: url('/assets/fonts/Inter-Bold.ttf');
 }
 
 
@@ -36,6 +40,10 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -49,7 +57,6 @@ header {
     height: 160px;
     background-color: #FFFFFF;
     line-height: 10px;
-
 }
 
 .header-logo {
@@ -62,16 +69,17 @@ header {
     display: flex;
     flex-direction: row;
     list-style: none;
+    align-items: center;
 }
 
 .header-ul a {
     text-decoration: none;
-    color: black;
+    color: #111827;
     position: relative;
     letter-spacing: 0.5px;
 }
 
-.header-ul a:after {
+.header-ul a:nth-child(-n + 3)::after {
     content: "";
     position: absolute;
     background-color: #FF0000;
@@ -103,13 +111,15 @@ header {
     color: #FFFFFF;
     background-color: #FF0000;
     border-radius: 30px;
-    padding: 10px 20px;
+    padding: 20px 20px;
     margin-left: 10px;
+    transition: 300ms all ease;
 }
 
 #header-li--contato:hover {
     color: #FFFFFF;
-    background-color: #FF0000;
+    background-color: #eb4d4b;
+    transform: scale(1.05);
 }
 
 .header-li_selected {
@@ -131,10 +141,12 @@ header {
 }
 
 .banner-titulo {
-    font-family: cocogoose;
+    font-family: inter-bold;
     font-size: 50px;
     line-height: 50px;
-    font-weight: bold;
+    letter-spacing: 1px;
+    color: #111827;
+    /* text-transform: uppercase; */
 }
 
 .banner-info {
@@ -167,6 +179,7 @@ header {
 
 .banner-botao:hover {
     background-color: #eb4d4b;
+    transform: scale(1.08);
 }
 
 .banner-img {
@@ -190,7 +203,7 @@ header {
 }
 
 .servicos-titulo {
-    font-family: os-titulo;
+    font-family: inter-bold;
     color: #050336;
     font-size: 40px;
     margin-bottom: 50px;
@@ -218,7 +231,7 @@ header {
 }
 
 .servicos-card {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.178);
+    box-shadow: 0 1px 6px 2px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
     border: 1px solid rgba(0, 0, 0, 0.103);
     padding: 15px;
     max-width: 300px;
@@ -228,7 +241,7 @@ header {
 }
 
 .servicos-card:hover {
-    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.178);
+    box-shadow: 0 3px 6px 2px rgba(0, 0, 0, .1), 0 3px 4px -1px rgba(0, 0, 0, .06);
 }
 
 .s-card-titulo {
@@ -249,7 +262,7 @@ header {
 }
 
 .qs-titulo {
-    font-family: os-titulo;
+    font-family: inter-bold;
     color: #050336;
     font-size: 40px;
     text-align: left;
@@ -285,7 +298,7 @@ header {
 }
 
 .avaliacoes-titulo {
-    font-family: os-titulo;
+    font-family: inter-bold;
     color: #050336;
     font-size: 40px;
     margin-bottom: 50px;
@@ -305,7 +318,7 @@ header {
     padding: 20px;
     padding-bottom: 5px;
     padding-top: 15px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.178);
+    box-shadow: 0 1px 6px 2px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
     border: 1px solid rgba(0, 0, 0, 0.103);
     border-radius: 10px;
     position: relative;
@@ -313,11 +326,12 @@ header {
 }
 
 .av-card:hover {
-    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.178);
+    box-shadow: 0 3px 6px 2px rgba(0, 0, 0, .1), 0 3px 4px -1px rgba(0, 0, 0, .06);
 }
 
 .avaliacoes-info {
     width: 100vh;
+    margin-left: 50px;
 }
 
 .av-card-img {
@@ -328,7 +342,7 @@ header {
 
 .avaliacoes-img {
     width: 580px;
-    margin-left: 150px;
+    margin-left: 160px;
 }
 
 .av-card-star {
@@ -391,6 +405,7 @@ header {
 
 .av-botao:hover {
     background-color: #eb4d4b;
+    transform: scale(1.05);
 }
 
 .contato {
@@ -408,7 +423,7 @@ header {
 }
 
 .ctt-titulo {
-    font-family: os-titulo;
+    font-family: inter-bold;
     color: #050336;
     font-size: 40px;
     margin-bottom: 50px;
@@ -523,6 +538,8 @@ header {
 
 .rede:hover {
     background-color: #eb4d4b;
+    transform: scale(1.05);
+
 }
 
 .form {
@@ -530,11 +547,26 @@ header {
     flex-direction: column;
     padding: 22px 22px 8px 22px ;
     width: 480px;
+}
+
+.input-error {
+    border: red 1.5px solid !important;
+    animation: erro 400ms alternate 4;
+
+}
+
+@keyframes erro {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.01);
+    }
 
 }
 
 .form-titulo {
-    font-family: cocogoose;
+    font-family: inter-bold;
     color: #050336;
     font-size: 35px;
     text-transform: uppercase;
@@ -544,7 +576,7 @@ header {
 }
 
 .ctt2-form {
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.178);
+    box-shadow: 0 1px 6px 2px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
     border-radius: 30px;
     border: 1px solid rgba(0, 0, 0, 0.103);
     padding-top: 40px;
@@ -554,17 +586,17 @@ header {
 
 .form-label {
     font-family: cocogoose;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 5px;
 }
 
 .form-input {
-    font-family: os-light;
+    font-family: os-regular;
     margin-bottom: 10px;
     padding: 8px 10px;
     border-radius: 5px;
     outline: 0;
-    border: 1px solid black;
+    border: 1px solid #111827;
     font-size: 17px;
 
 }
@@ -572,7 +604,7 @@ header {
 .form-input::placeholder {
     color: rgba(0, 0, 0, 0.575);
     font-size: 17px;
-    font-family: os-light;
+    font-family: os-regular;
 }
 
 .cpf-phone {
@@ -613,25 +645,129 @@ header {
 
 .form-botao:hover {
     background-color: #eb4d4b;
+    transform: scale(1.05);
 }
 
-.bancos {
+/* css perguntas frequentes */
+
+.duvidas {
     display: flex;
-    padding-top: 60px;
-    align-items: center;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
 
 }
 
-.bancos-titulo {
-    margin-bottom: 60px;
-    font-family: cocogoose;
-    font-size: 37px;
+.duvidas-title {
+    color: #050336;
     text-transform: uppercase;
+    font-family: inter-bold;
+    font-size: 35px;
+    margin-bottom: 40px;
 }
 
-.banco {
-    width: 290px;
-    border-radius: 10px;
+.duvidas-card {
+    margin-bottom: 10px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    width: 700px;
+    border-bottom: 1px solid rgb(206, 206, 206);
+}
+
+.duvidas-resposta.active {
+    display: block;
+
+}
+
+.duvidas-arrow.active {
+    transform: rotate(180deg);
+    transition: 400ms all;
+}
+
+.duvidas-resposta.hidden {
+    display: none;
+}
+
+.duvidas-pergunta {
+    font-family: inter-bold;
+    letter-spacing: 1.1px;
+    color: #040246;
+    font-size: 23px;
+    text-align: center;
+    padding-bottom: 8px;
+    margin-left: 5px;
+}
+
+.duvidas-arrow::selection, .duvidas-pergunta::selection{
+    background-color: #FFFFFF;
+    color: #050336;
+}
+
+.duvidas-card_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.duvidas-arrow {
+    background-image: url('/assets/img/fi-rr-angle-small-down.svg');
+    width: 30px; 
+    height: 23px;
+    margin-bottom: 5px;
+    transition: 400ms all;
+
+}
+
+.duvidas-resposta {
+    font-family: montserrat;
+    font-size: 18px;
+}
+
+/* Footer css */
+
+footer {
+    height: 300px;
+    background-color: #FF0000;
+}
+
+/*  scroll to top button */
+.scrollTop {
+    outline: none;
+    border: 0;
+    background-color: #eb4d4b;
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    box-shadow: 0 1px 6px 2px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+    z-index: 999;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms all ease;
+    transform: translateX(30px);
+}
+
+.scrollTop.active {
+    opacity: 1;
+    transform: translateX(-30px);
+    visibility: visible;
+}
+
+.scrollTop:hover {
+    background-color: #D43C39;
+}
+
+.scrollTop img {
+    width: 80%;
 }
