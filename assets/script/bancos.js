@@ -6,14 +6,14 @@ $('.owl-carousel').owlCarousel({
         0:{
             items:2
         },
-        650:{
-            items:3
-        },
-        800:{
+        600:{
             items:4
         },
-        1000:{
+        950:{
             items:5
+        },
+        1300:{
+            items:6
         },
         1900: {
             items:10

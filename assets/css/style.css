@@ -43,7 +43,7 @@
 }
 
 *::selection {
-    background-color: rgb(145, 174, 230);
+    background-color: rgb(165, 194, 247);
 }
 
 html {
@@ -52,6 +52,7 @@ html {
 
 body {
     background-color: #FFFFFF;
+    overflow-x: hidden;
 }
 
 header {
@@ -196,11 +197,11 @@ header {
     display: flex;
     justify-content: space-around;
     border-bottom: 1px solid rgba(0, 0, 0, 0.048);
+    width: 100%;
 
 }
 
 .servicos-info {
-    margin-right: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -311,8 +312,8 @@ header {
 }
 
 .av-cards {
-    max-width: 300px;
-    height: 200px;
+    max-width: 620px;
+    max-height: 483.6px;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 300px 300px;
@@ -396,7 +397,7 @@ header {
     text-align: center;
     font-family: cocogoose;
     text-transform: uppercase;
-    margin-top: 300px;
+    margin-top: 15px;
     margin-left: 450px;
     cursor: pointer;
     transition: 300ms all ease-in-out;
@@ -731,7 +732,7 @@ header {
     margin-bottom: 10px;
     padding-bottom: 12px;
     padding-top: 12px;
-    width: 850px;
+    width: 700px;
     padding-left: 10px;
     padding-right: 10px;
     border-bottom: 1px solid rgb(206, 206, 206);
@@ -841,4 +842,124 @@ footer {
 
 .scrollTop img {
     width: 80%;
+}
+
+/* CSS RESPONSIVO */
+
+.qs-img-mobile {
+    display: none;
+}
+
+.banner-mobile {
+    display: none;
+}
+
+.ctt-img-mobile-1 {
+    display: none;
+}
+
+@media (max-width: 1400px) {
+
+    .banner {
+        display: none;
+    }
+    .banner-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner-img {
+        margin: 0;
+    }
+    .avaliacoes-img {
+        margin-left: 50px;
+    }
+    .servicos-titulo {
+        margin-right: 0;
+    }
+    .servicos-info {
+        margin: 0;
+        width: 100%;
+    }
+    .servicos-img {
+        display: none;
+    }
+    .servicos-cards {
+        width: 100%;
+        justify-content: center;
+    }
+    .servicos-card {
+        max-width: 100%;
+    }
+    .avaliacoes {
+        flex-direction: column;
+    }
+    .qs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .qs-img {
+        display: none;
+    }
+    .qs-text {
+        margin-left: 0;
+    }
+    .qs-titulo {
+        text-align: center;
+    }
+    .qs-img-mobile {
+        display: block;
+        max-width: 450px;
+    }
+    .avaliacoes {
+        align-items: center;
+    }
+    .avaliacoes-img {
+        margin: 0;
+    }
+    .avaliacoes-titulo {
+        padding: 0;
+    }
+    .avaliacoes-info {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .av-cards {
+        margin: 0;
+    }
+    .contato {
+        flex-direction: column;
+        align-items: center;
+    }
+    .ctt-titulo {
+        margin-top: 40px;
+        text-align: center;
+    }
+    .ctt-left, .ctt-right {
+        margin: 0;
+    }
+    .ctt2-left {
+        display: none;
+    }
+    .contato2 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .ctt2-form {
+        margin: 0;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ctt-img-mobile-1 {
+        display: block;
+        width: 600px;
+    }
+    .duvidas-card {
+        width: 600px;
+    }
+
 }
