@@ -35,8 +35,6 @@
     src: url('/assets/fonts/Inter-Bold.ttf');
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -44,10 +42,6 @@
 
 *::selection {
     background-color: rgb(165, 194, 247);
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -163,6 +157,7 @@ header {
     font-size: 22px;
     font-family: os-regular;
 }
+
 
 .banner-botao {
     display: flex;
@@ -802,8 +797,20 @@ header {
 /* Footer css */
 
 footer {
-    height: 300px;
-    background-color: #FF0000;
+    height: 220px;
+    background-color: #6b1d26;
+    display: flex;
+}
+
+.footer-copy {
+    width: 100%;
+    background-color: #6b1d26;
+    color: white;
+    font-family: os-light;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.295);
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 /*  scroll to top button */
@@ -857,6 +864,12 @@ footer {
 .ctt-img-mobile-1 {
     display: none;
 }
+
+.banner-mobile a {
+    text-decoration: none;
+}
+
+
 
 @media (max-width: 1400px) {
 
@@ -961,5 +974,114 @@ footer {
     .duvidas-card {
         width: 600px;
     }
+    .bancos-imgs {
+        width: 98%;
+    }
+}
 
+@media (max-width: 900px) {
+    .banner-titulo {
+        font-size: 35px;
+        line-height: 35px;
+    }
+    .banner-img {
+        width: 350px;
+        height: auto;
+    }
+    .banner-p {
+        font-size: 18px;
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+    .servicos-titulo {
+        font-size: 30px;
+    }
+    .s-card-p {
+        font-size: 15px;
+    }
+    .qs-img-mobile {
+        max-width: 350px;
+    }
+    .qs-titulo {
+        font-size: 30px;
+    }
+    .qs-p {
+        font-size: 16px;
+        margin: 20px 10px;
+        text-align: justify;
+    }
+    .qs-text {
+        margin-top: 50px;
+        width: 100%;
+    }
+    .avaliacoes{
+        padding-top: 30px;
+    }
+    .avaliacoes-img {
+        width: 380px;
+    }
+    .avaliacoes-titulo {
+        font-size: 30px;
+    }
+    .ctt-img-mobile-1 {
+        width: 390px;
+    }
+    .ctt-titulo {
+        font-size: 30px;
+    }
+    .ctt-img {
+        width: 350px;
+    }
+    .form-titulo {
+        font-size: 30px;
+    }
+    .bancos-title {
+        font-size: 30px;
+    }
+    .banco-img {
+        width: 120px !important;
+    }
+    .duvidas-title {
+        font-size: 30px;
+    }
+    .duvidas-pergunta {
+        font-size: 19px;
+    }
+    .duvidas-resposta {
+        font-size: 16px;
+    }
+    .scrollTop.active {
+        transform: translateX(0px);
+    }
+    header {
+        display: none;
+    }
+    .servicos-cards {
+        grid-template-columns: 48% 48%;
+        gap: 3px;
+    }
+}
+
+@media (max-width: 650px) {
+    .av-cards {
+        grid-template-columns: 300px;
+        max-height: unset;
+        gap: 7px;
+    }
+    .av-botao {
+        margin: 10px 0 0 0;
+    }
+    .ctt-left iframe {
+        width: 100%;
+    }
+    .ctt2-form form {
+        padding: 10px;
+        width: 390px;
+    }
+    .banco-img {
+        width: 110px !important;
+    }
+    .duvidas-card {
+        width: 90%;
+    }
 }
