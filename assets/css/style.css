@@ -34,6 +34,7 @@
     font-family: inter-bold;
     src: url('/assets/fonts/Inter-Bold.ttf');
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 * {
     margin: 0;
@@ -44,9 +45,14 @@
     background-color: rgb(165, 194, 247);
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #FFFFFF;
     overflow-x: hidden;
+    position: relative;
 }
 
 header {
@@ -314,6 +320,15 @@ header {
     grid-template-columns: 300px 300px;
 }
 
+.av-text1, .av-text2, .av-text4 {
+    margin-bottom: 38px;
+}
+
+.av-text3 {
+    margin-bottom: 56px;
+
+}
+
 .av-card {
     padding: 20px;
     padding-bottom: 5px;
@@ -379,7 +394,6 @@ header {
     font-family: cocogoose;
     font-size: 12px;
     text-align: right;
-    margin-top: 15px;
 }
 
 .av-botao {
@@ -800,6 +814,63 @@ footer {
     height: 220px;
     background-color: #6b1d26;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-div {
+    text-align: center;
+    color: white;
+    position: relative;
+    width: 30%;
+}
+
+
+.footer-div2:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 170px;
+    background-color: rgba(255, 255, 255, 0.295);
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+}
+
+.footer-titulo {
+    text-transform:  uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+    width: 135px;
+    margin: 12px auto;
+    margin-top: 0;
+    align-items: center;
+}
+
+.footer-legend {
+    margin-bottom: 9px;
+    font-family: os-light;
+    font-size: 21px;
+    color: white;
+    transition: 200ms all;
+
+}
+
+.footer-link {
+    text-decoration: none;
+    width: 30px;
+}
+
+.footer-legend:hover {
+    color: #eb4d4b;
+}
+
+.footer-img {
+    width: 280px;
 }
 
 .footer-copy {
