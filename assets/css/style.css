@@ -85,7 +85,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-.header-ul a:nth-child(-n + 3)::after {
+.header-ul a:nth-child(-n + 4)::after {
     content: "";
     position: absolute;
     background-color: #FF0000;
@@ -195,7 +195,7 @@ body {
     justify-content: space-around;
     border-bottom: 1px solid rgba(0, 0, 0, 0.048);
     width: 100%;
-
+    padding-bottom: 30px;
 }
 
 .servicos-info {
@@ -208,8 +208,8 @@ body {
     font-family: inter-bold;
     color: #050336;
     font-size: 40px;
-    margin-bottom: 50px;
-    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-top: 50px;
     margin-right: 70px;
     font-weight: bold;
 }
@@ -238,7 +238,7 @@ body {
     padding: 15px;
     max-width: 300px;
     border-radius: 15px;
-    height: 200px;
+    height: 253px;
     transition: all 200ms;
 }
 
@@ -260,7 +260,7 @@ body {
     justify-content: space-around;
     padding-top: 50px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.048);
-
+    padding-bottom: 30px;
 }
 
 .qs-titulo {
@@ -289,16 +289,6 @@ body {
     font-size: 22px;
     color: rgba(0, 0, 0, 0.527);
     text-align: left;
-}
-
-.qs-p a {
-    text-decoration: none;
-    color: #040246;
-    transition: 300ms all;
-}
-
-.qs-p a:hover {
-    color: #0e08b8;
 }
 
 .avaliacoes {
@@ -438,6 +428,10 @@ body {
     margin-left: 150px;
 }
 
+.ctt-left a {
+    text-decoration: none;
+}
+
 .ctt-right {
     margin-right: 100px;
 }
@@ -571,7 +565,7 @@ body {
 
 .input-error {
     border: red 1.5px solid !important;
-    animation: erro 400ms alternate 4;
+    animation: erro 200ms alternate 4;
 
 }
 
@@ -580,7 +574,7 @@ body {
         transform: scale(1);
     }
     to {
-        transform: scale(1.01);
+        transform: scale(1.005);
     }
 
 }
@@ -1000,6 +994,8 @@ footer {
     }
     .qs-text {
         margin-left: 0;
+        width: 60%;
+
     }
     .qs-titulo {
         text-align: center;
@@ -1101,6 +1097,7 @@ footer {
         margin: 8px;
         background-color: #0007A7;
         transition: .3s all;
+        border-radius: 40%;
     }
 
     .mobile-menu.active .line1 {
@@ -1124,25 +1121,30 @@ footer {
     }
     
     #header-li--contato:hover {
-        color: #FF0000;
+        color: #0e08b8;
         background-color: transparent;
         transform: scale(1);
     }
 
-    .header-ul a:nth-child(-n+3)::after {
+    .header-li:hover {
+        color: #0e08b8;
+    }
+
+    .header-ul a:nth-child(-n+4)::after {
         display: none;
     }
     
     .header-nav {
         top: 0;
         right: 0;
-        width: 50vw;
+        width: 58vw;
         height: 100vh;
         background-color: #FFFF;
         transform: translateX(100%);
         transition: transform 300ms ease-in;
         position: fixed;
         z-index: 2;
+        border-left: 1px solid rgba(0, 0, 0, 0.363);
 
     }
 
@@ -1160,6 +1162,7 @@ footer {
         font-size: 35px;
         line-height: 35px;
         margin-top: 20px;
+        line-height: 30px;
     }
     .banner-img {
         width: 350px;
@@ -1252,6 +1255,9 @@ footer {
     .ctt-left iframe {
         width: 100%;
     }
+    .ctt-adress, .ctt-legend, .ctt-phone {
+        margin-left: 2px;
+    }
     .ctt2-form form {
         padding: 10px;
         width: 390px;
@@ -1267,6 +1273,42 @@ footer {
     }
     .footer-div2:before {
         display: none;
+    }
+
+}
+
+@media (max-width: 440px) {
+    .header-logo {
+        margin-left: 0;
+        width: 160px;
+        height: 38px;
+        margin-top: 1px;
+    }
+    .banner-titulo {
+        font-size: 33px;
+    }
+    .servicos-card {
+        height: 350px;
+        padding: 5px;
+    }
+    .ctt2-form {
+        width: 90%;
+    }
+    .ctt2-form form {
+        width: 95%;
+    }
+    .duvidas-title {
+        font-size: 27px;
+    }
+    .footer-titulo {
+        font-size: 20px;
+    }
+    .footer-legend {
+        font-size: 18px;
+    }
+    .scrollTop {
+        width: 50px;
+        height: 50px;
     }
 
 }
