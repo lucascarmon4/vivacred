@@ -36,6 +36,9 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -164,6 +167,11 @@ body {
     font-family: os-regular;
 }
 
+.banner-botoes {
+    display: flex;
+    align-items: center;
+}
+
 .banner-botao {
     display: flex;
     align-items: center;
@@ -175,7 +183,7 @@ body {
     color: #FFFFFF;
     border-radius: 5px;
     height: 45px;
-    width: 280px;
+    width: 260px;
     background-color: #FF0000;
     transition: 300ms all ease-in-out;
     margin-top: 30px;
@@ -185,6 +193,31 @@ body {
 .banner-botao:hover {
     background-color: #eb4d4b;
     transform: scale(1.08);
+}
+
+.banner-botao-2 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    font-family: cocogoose;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    color: #FF0000;
+    border-radius: 5px;
+    height: 40px;
+    width: 210px;
+    background-color: #FFFFFF;
+    transition: 300ms all ease-in-out;
+    margin-top: 30px;
+    font-size: 15px;
+    margin-left: 15px;
+    border: 1px solid #FF0000;
+}
+
+.banner-botao-2:hover {
+    color: #FFFFFF;
+    background-color: #eb4d4b;
 }
 
 .banner-img {
@@ -211,7 +244,7 @@ body {
     font-family: inter-bold;
     color: #050336;
     font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 50px;
     margin-right: 70px;
     font-weight: bold;
@@ -229,6 +262,7 @@ body {
     margin-left: 10px;
 }
 
+
 .servicos-cards {
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -241,8 +275,52 @@ body {
     padding: 15px;
     max-width: 300px;
     border-radius: 15px;
-    height: 253px;
+    height: 270px;
     transition: all 200ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sm-div {
+    opacity: 0;
+    padding-left: 180px;
+    transition: .5s all;
+    transform: translateX(-80px) scale(0.5);
+    width: 100%;
+}
+
+.sm-div-show {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+.sm-div-mbl {
+    display: none;
+    opacity: 1;
+    transition: .5s all;
+    width: 100%;
+    bottom: 1;
+}
+
+.sm-link-mbl {
+    font-family: cocogoose;
+    font-size: 14px;
+    color: #3d37e4;
+    text-decoration: none;
+    transition: .3s all;
+}
+
+.sm-link {
+    font-family: cocogoose;
+    font-size: 14px;
+    color: #3d37e4;
+    text-decoration: none;
+    transition: .3s all;
+}
+
+.sm-link:hover, .sm-link-mbl:hover {
+    color: #0e08b8;
 }
 
 .servicos-card:hover {
@@ -696,6 +774,7 @@ body {
     margin-right: 20px;
     transition: 400ms all;
 }
+
 .owl-next {
     margin-left: 20px;
     transition: 400ms all;
@@ -714,7 +793,6 @@ body {
     width: 80%;
     flex-wrap: wrap;
 }
-
 
 .banco-img {
     width: 150px !important;
@@ -748,7 +826,10 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     border-bottom: 1px solid rgb(206, 206, 206);
+
 }
+
+
 
 .duvidas-resposta.active {
     display: block;
@@ -757,7 +838,7 @@ body {
 
 @keyframes resposta {
     0% {
-        transform: translateY(-8px);
+        transform: translateY(-7px);
     }
     100% {
         transform: translateY(0px);
@@ -777,7 +858,7 @@ body {
     font-family: inter-bold;
     letter-spacing: 1.1px;
     color: #040246;
-    font-size: 23px;
+    font-size: 22px;
     padding-bottom: 8px;
     margin-left: 5px;
 }
@@ -950,7 +1031,17 @@ footer {
     text-decoration: none;
 }
 
-
+@media (max-width: 1580px) {
+    .sm-div-show{
+        transform: translateX(-50px);
+    }
+    .sm-link {
+        font-size: 14px;
+    }
+    .servicos-card{
+        height: 284px;
+    }
+}
 
 @media (max-width: 1400px) {
 
@@ -984,6 +1075,21 @@ footer {
     }
     .servicos-card {
         max-width: 100%;
+    }
+    .sm-div {
+        opacity: 0;
+        padding-left: 180px;
+        transition: .5s all;
+        transform: translateX(-120px) scale(0.5);
+        width: 100%;
+    }
+    
+    .sm-div-show {
+        opacity: 1;
+        transform: translateX(-20px) scale(1);
+    }
+    .sm-link {
+        font-size: 14px;
     }
     .avaliacoes {
         flex-direction: column;
@@ -1182,6 +1288,13 @@ footer {
     .s-card-p {
         font-size: 15px;
     }
+    .sm-div {
+        display: none;
+    }
+    .sm-div-mbl {
+        display: block;
+        text-align: center;
+    }
     .qs-img-mobile {
         max-width: 350px;
     }
@@ -1247,6 +1360,14 @@ footer {
 }
 
 @media (max-width: 650px) {
+    .banner-botoes {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .banner-botao-2 {
+        margin-top: 10px;
+        margin-left: 0;
+    }
     .av-cards {
         grid-template-columns: 300px;
         max-height: unset;
@@ -1254,6 +1375,9 @@ footer {
     }
     .av-botao {
         margin: 10px 0 0 0;
+    }
+    .sm-div-mbl {
+        text-align: right;
     }
     .ctt-left iframe {
         width: 100%;
@@ -1293,6 +1417,9 @@ footer {
     .servicos-card {
         height: 350px;
         padding: 5px;
+    }
+    .sm-div-mbl {
+        text-align: center;
     }
     .ctt2-form {
         width: 90%;
