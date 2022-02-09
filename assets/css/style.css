@@ -1206,7 +1206,7 @@ footer {
         margin: 8px;
         background-color: #0007A7;
         transition: .3s all;
-        border-radius: 40%;
+        border-radius: 100px;
     }
 
     .mobile-menu.active .line1 {
