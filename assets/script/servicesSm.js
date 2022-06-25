@@ -8,6 +8,8 @@ let square5 = document.querySelector('.square5');
 let square6 = document.querySelector('.square6');
 let divSquares = document.querySelector('.div-squares');
 
+let squaresX = document.querySelectorAll('.square-x');
+
 for (let i = 0; i < links.length; i++) {
     const link = links[i];
     link.addEventListener('click', (event) => {
@@ -41,28 +43,28 @@ for (let i = 0; i < links.length; i++) {
         }
 
 
-        divSquares.addEventListener('click', () => { 
-            
-            square1.classList.add('hidden');
-            square2.classList.add('hidden');
-            square3.classList.add('hidden');
-            square4.classList.add('hidden');
-            square5.classList.add('hidden');
-            square6.classList.add('hidden');
+        ///FECHAR MODAL
+        divSquares.addEventListener('click', (event) => {
+            const clicked = event.target;
+            if (clicked.className == 'div-squares' || clicked.className == 'square-x' || clicked.id == 'close1' || clicked.id == 'close2') {
+                square1.classList.add('hidden');
+                square2.classList.add('hidden');
+                square3.classList.add('hidden');
+                square4.classList.add('hidden');
+                square5.classList.add('hidden');
+                square6.classList.add('hidden');
+                square1.classList.remove('show-service');
+                square2.classList.remove('show-service');
+                square3.classList.remove('show-service');
+                square4.classList.remove('show-service');
+                square5.classList.remove('show-service');
+                square6.classList.remove('show-service');
+                divSquares.classList.add('hidden');
+            }
+            console.log(clicked);
 
-            square1.classList.remove('show-service');
-            square2.classList.remove('show-service');
-            square3.classList.remove('show-service');
-            square4.classList.remove('show-service');
-            square5.classList.remove('show-service');
-            square6.classList.remove('show-service');
-            divSquares.classList.add('hidden');
         })
-
-
     })
+
+
 }
-
-
-
-// //

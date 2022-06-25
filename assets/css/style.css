@@ -386,19 +386,21 @@ body {
     right: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.501);
+    background-color: rgba(0, 0, 0, 0.504);
     z-index: 10;
     transition: .3s all;
 }
 
 .hide-square { 
     width: 80vw;
-    height: 80vh;
-    top: 10%;
+    height: 90vh;
+    top: 5%;
     position: fixed;
     z-index: 11;
     background-color: white;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-radius: 10px;
     
 }
@@ -429,12 +431,103 @@ body {
 
 .square-top-div1 {
     transform: rotate(-45deg) translate(-8px, 8px);
-
 }
 
 .square-top-div2 {
     transform: rotate(45deg);
 }
+
+.square-middle {
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-left {
+    padding: 0 50px 0px 50px;
+    width: 50%;
+    border-right: 1px solid #4141414a;
+    text-align: center;
+}
+
+.modal-right {
+    padding: 0 50px 0px 50px;
+    width: 50%;
+
+}
+
+.modal-title {
+    font-family: inter-bold;
+    color: #050336;
+    font-size: 40px;
+    text-align: left;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.title-right {
+    font-size: 40px;
+}
+
+.modal-content { 
+    font-family: montserrat;
+    font-size: 20px;
+    text-align: justify;
+    padding: 40px;
+}
+
+.modal-list {
+    font-family: montserrat;
+    font-size: 20px;
+    text-align: justify;
+    padding: 40px;
+}
+
+.modal-list-item {
+    padding: 10px;
+}
+
+.modal-list-item:first-child {
+    padding-top: 0;
+}
+
+.square-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 20px;
+    margin-right: 30px;
+}
+
+.square-bottom a {
+    text-decoration: none;
+    width: 281px;
+    height: 52px;
+}
+
+.modal-btn {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    font-family: cocogoose;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    height: 35px;
+    width: 230px;
+    background-color: #FF0000;
+    transition: 300ms all ease-in-out;
+    font-size: 18px;
+}
+
+.modal-btn:hover {
+    background-color: #eb4d4b;
+    transform: scale(1.08);
+}
+
+
 
 /* Quem somos? */
 
