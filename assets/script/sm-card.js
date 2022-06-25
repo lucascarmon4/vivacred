@@ -7,7 +7,7 @@ for (let i = 0; i < sCards.length; i++) {
         saibaMais.classList.add('sm-div-show')
     })
     sCard.addEventListener('mouseout', () => {
-        saibaMais.classList.remove('sm-div-show')
+        saibaMais.classList.remove('sm-div-show');
     })
 }
 

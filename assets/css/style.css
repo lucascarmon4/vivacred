@@ -72,7 +72,7 @@ body {
 }
 
 .header-logo {
-    width: 190px;
+    width: 170px;
     height: 45px;
     margin-top: 10px;
 }
@@ -309,6 +309,7 @@ body {
     color: #3d37e4;
     text-decoration: none;
     transition: .3s all;
+    cursor: pointer;
 }
 
 .sm-link {
@@ -317,6 +318,7 @@ body {
     color: #3d37e4;
     text-decoration: none;
     transition: .3s all;
+    cursor: pointer;
 }
 
 .sm-link:hover, .sm-link-mbl:hover {
@@ -335,6 +337,106 @@ body {
 .s-card-p {
     font-family: os-light;
 }
+
+/* Blog */
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes openModal {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes closeModal {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.show-service {
+    animation: openModal .3s ;
+}
+
+.hide-services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.div-squares {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.501);
+    z-index: 10;
+    transition: .3s all;
+}
+
+.hide-square { 
+    width: 80vw;
+    height: 80vh;
+    top: 10%;
+    position: fixed;
+    z-index: 11;
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+    
+}
+
+.square-top {
+    height: 50px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.square-x {
+    height: 40px;
+    width: 40px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.div-x {
+    width: 32px;
+    height: 3px;
+    margin: 8px;
+    background-color: #0007A7;
+    border-radius: 10px;
+}
+
+.square-top-div1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+
+}
+
+.square-top-div2 {
+    transform: rotate(45deg);
+}
+
+/* Quem somos? */
 
 .qs {
     display: flex;
@@ -883,7 +985,6 @@ body {
     height: 23px;
     margin-bottom: 5px;
     transition: 400ms all;
-
 }
 
 .duvidas-resposta {
@@ -1205,7 +1306,7 @@ footer {
         height: 3px;
         margin: 8px;
         background-color: #0007A7;
-        transition: .3s all;
+        transition: .4s all ease;
         border-radius: 100px;
     }
 
