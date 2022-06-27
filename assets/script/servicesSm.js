@@ -1,4 +1,4 @@
-let links = document.querySelectorAll('.sm-link');
+let links = document.querySelectorAll('.selectLink');
 
 let square1 = document.querySelector('.square1');
 let square2 = document.querySelector('.square2');

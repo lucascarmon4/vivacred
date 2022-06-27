@@ -1033,8 +1033,6 @@ body {
 
 }
 
-
-
 .duvidas-resposta.active {
     display: block;
     animation: resposta 200ms ease-in;
@@ -1294,6 +1292,21 @@ footer {
     .sm-link {
         font-size: 14px;
     }
+    .modal-title {
+        font-size: 30px;
+    }
+    .modal-content {
+        font-size: 16px;
+        padding: 5px;
+    }
+    .modal-list {
+        font-size: 16px;
+    }
+    .modal-btn {
+        font-size: 14px;
+        width: 200px;
+        height: 30px;
+    }
     .avaliacoes {
         flex-direction: column;
     }
@@ -1497,6 +1510,40 @@ footer {
     .sm-div-mbl {
         display: block;
         text-align: center;
+    }
+    .hide-square {
+        width: 90vw;
+        height: 95vh;
+        top: 2.5%;
+    }
+    .modal-title {
+        margin-bottom: 10px;
+    }
+    .modal-content {
+        margin-bottom: 5px;
+    }
+    .square-middle{
+        flex-direction: column;
+    }
+    .square-bottom {
+        justify-content: center;
+    }
+    .square-bottom a {
+        width: 200px;
+        height: 30px;
+    }
+    .modal-left, .modal-right{
+        width: 100%;
+        padding: 0;
+    }
+    .modal-list-item {
+        padding: 5px;
+    }
+    .modal-list {
+        padding: 0 10px 0 40px;
+    }
+    .modal-content{ 
+        padding: 0 10px 0 10px;
     }
     .qs-img-mobile {
         max-width: 350px;
