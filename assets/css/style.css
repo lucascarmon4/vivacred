@@ -59,8 +59,13 @@ body {
 }
 
 .underline {
+    font-weight: 600;
     text-decoration: underline;
 }
+
+.bold {
+    font-weight: 600;
+} 
 
 .header {
     display: flex;
@@ -338,7 +343,7 @@ body {
     font-family: os-light;
 }
 
-/* Blog */
+/* modal saibamais */
 
 .hidden {
     display: none !important;
@@ -441,7 +446,7 @@ body {
 }
 
 .square-top-div1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
+    transform: rotate(-45deg) translate(-7px, 8px);
 }
 
 .square-top-div2 {
@@ -1242,6 +1247,10 @@ footer {
     .servicos-card{
         height: 284px;
     }
+    .avaliacoes-img{
+        margin-left: 100px;
+        transition: 1s all;
+    }
 }
 
 @media (max-width: 1400px) {
@@ -1390,11 +1399,9 @@ footer {
 @media (max-width: 900px) {
     @keyframes navLinkFade {
         from {
-            opacity: 0;
             transform: translateX(50px);
         }
         to {
-            opacity: 1;
             transform: translateX(0);
         }
     }
@@ -1432,7 +1439,7 @@ footer {
         opacity: 0;
     }
     .mobile-menu.active .line3 {
-        transform: rotate(45deg) translate(-6px, -8px);
+        transform: rotate(45deg) translate(-7px, -8px);
     }
 
 
@@ -1449,6 +1456,10 @@ footer {
         color: #0e08b8;
         background-color: transparent;
         transform: scale(1);
+    }
+
+    .header-li {
+        transform: translateX(50px);
     }
 
     .header-li:hover {
@@ -1516,14 +1527,19 @@ footer {
         height: 95vh;
         top: 2.5%;
     }
+    .square-x {
+        margin-right: 20px;
+    }
     .modal-title {
         margin-bottom: 10px;
     }
     .modal-content {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
     .square-middle{
         flex-direction: column;
+        height: inherit;
+        justify-content: space-evenly;
     }
     .square-bottom {
         justify-content: center;
@@ -1535,6 +1551,9 @@ footer {
     .modal-left, .modal-right{
         width: 100%;
         padding: 0;
+    }
+    .modal-right {
+        margin-bottom: 30px;
     }
     .modal-list-item {
         padding: 5px;
@@ -1564,8 +1583,8 @@ footer {
         padding-top: 30px;
     }
     .avaliacoes-img {
-        width: 380px;
-    }
+        width: 380px;  
+     }
     .avaliacoes-titulo {
         font-size: 30px;
     }
@@ -1656,10 +1675,11 @@ footer {
 
 @media (max-width: 440px) {
     .header-logo {
-        margin-left: 0;
-        width: 160px;
+        margin-left: 20px;
+        width: 150px;
         height: 38px;
         margin-top: 1px;
+        border-radius: 2px;
     }
     .banner-titulo {
         font-size: 33px;
