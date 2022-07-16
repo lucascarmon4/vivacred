@@ -9,7 +9,6 @@ for (let i = 0; i < cards.length; i++) {
         let img = card.lastElementChild;
         img.classList.toggle('active');
         resposta.classList.toggle('active');
-        resposta.classList.toggle('hidden');
     })
 
 }

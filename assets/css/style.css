@@ -380,7 +380,6 @@ body {
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
 }
 
 .div-squares {
@@ -1035,12 +1034,22 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     border-bottom: 1px solid rgb(206, 206, 206);
+}
+
+.duvidas-resposta {
+    font-family: montserrat;
+    font-size: 18px;
+    max-height: 0;
+    opacity: 0;
+    transition: 200ms max-height, 200ms opacity;
 
 }
 
 .duvidas-resposta.active {
     display: block;
-    animation: resposta 200ms ease-in;
+    opacity: 1;
+    max-height: 100px;
+    transition: 200ms max-height, 200ms opacity;
 }
 
 @keyframes resposta {
@@ -1054,11 +1063,7 @@ body {
 
 .duvidas-arrow.active {
     transform: rotate(180deg);
-    transition: 400ms all ease-out;
-}
-
-.duvidas-resposta.hidden {
-    display: none;
+    transition: 400ms transform ease-out;
 }
 
 .duvidas-pergunta {
@@ -1092,10 +1097,7 @@ body {
     transition: 400ms all;
 }
 
-.duvidas-resposta {
-    font-family: montserrat;
-    font-size: 18px;
-}
+
 
 /* Footer css */
 
@@ -1663,6 +1665,9 @@ footer {
     }
     .duvidas-card {
         width: 90%;
+    }
+    .duvidas-resposta {
+        font-size: 15px;
     }
     .footer-div3 {
         display: none;
