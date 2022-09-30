@@ -418,6 +418,9 @@ body {
     justify-content: space-between;
     border-radius: 10px;
     transform: scale(1);
+    overflow-x: hidden;
+    overflow-y: overlay;
+
 }
 
 .square-top {
@@ -506,7 +509,6 @@ body {
     align-items: center;
     justify-content: end;
     margin-bottom: 20px;
-    margin-right: 30px;
 }
 
 .square-bottom a {
@@ -1565,9 +1567,6 @@ footer {
     .modal-left, .modal-right{
         width: 100%;
         padding: 0;
-    }
-    .modal-right {
-        margin-bottom: 30px;
     }
     .modal-list-item {
         padding: 5px;
