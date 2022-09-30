@@ -156,9 +156,9 @@ body {
 
 .banner-titulo {
     font-family: inter-bold;
-    font-size: 50px;
-    line-height: 50px;
-    letter-spacing: 1px;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: .5px;
     color: #111827;
 }
 
@@ -494,7 +494,7 @@ body {
 }
 
 .modal-list-item {
-    padding: 10px;
+    padding: 7px;
 }
 
 .modal-list-item:first-child {
@@ -1086,7 +1086,6 @@ body {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-
 }
 
 .duvidas-arrow {
@@ -1239,6 +1238,8 @@ footer {
     text-decoration: none;
 }
 
+
+
 @media (max-width: 1580px) {
     .sm-div-show{
         transform: translateX(-50px);
@@ -1252,6 +1253,18 @@ footer {
     .avaliacoes-img{
         margin-left: 100px;
         transition: 1s all;
+    }
+    .square1 h1 {
+        font-size: 25px;
+    }
+    .square1 p, .square1 li {
+        font-size: 14px;
+    }
+    .square4 h1 {
+        font-size: 23px;
+    }
+    .square4 p {
+        font-size: 14px;
     }
 }
 
@@ -1483,7 +1496,6 @@ footer {
         position: fixed;
         z-index: 2;
         border-left: 1px solid rgba(0, 0, 0, 0.363);
-
     }
 
     .header-ul {
