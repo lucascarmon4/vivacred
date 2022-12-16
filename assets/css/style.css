@@ -286,7 +286,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     cursor:default;
-    z-index: 3;
 }
 
 .sm-div {
