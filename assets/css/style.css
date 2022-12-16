@@ -285,6 +285,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor:default;
 }
 
 .sm-div {
@@ -352,21 +353,21 @@ body {
 @keyframes openModal {
     from {
         opacity: 0;
-        transform: scale(0);
+        transform: translateY(-100px) ;
     }
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0px) scale(1);
     }
 }
 @keyframes closeModal {
     from {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0) ;
     }
     to {
         opacity: 0;
-        transform: scale(0);
+        transform: translateY(-200px) ;
     }
 }
 
@@ -1426,11 +1427,9 @@ footer {
         height: 60px;
         justify-content: space-between;
     }
-
     .header-logo {
         margin-left: 20px;
     }
-
     .mobile-menu {
         display: block;
         cursor: pointer;
@@ -1439,7 +1438,6 @@ footer {
         position: fixed;
         right: 0;
     }
-    
     .mobile-menu div {
         width: 32px;
         height: 3px;
@@ -1448,7 +1446,6 @@ footer {
         transition: .4s all ease;
         border-radius: 100px;
     }
-
     .mobile-menu.active .line1 {
         transform: rotate(-45deg) translate(-8px, 8px);
     }
@@ -1458,8 +1455,6 @@ footer {
     .mobile-menu.active .line3 {
         transform: rotate(45deg) translate(-7px, -8px);
     }
-
-
     #header-li--contato {
         color: black;
         background-color: transparent;
@@ -1468,25 +1463,20 @@ footer {
         margin-left: 0;
         transition: 300ms all ease;
     }
-    
     #header-li--contato:hover {
         color: #0e08b8;
         background-color: transparent;
         transform: scale(1);
     }
-
     .header-li {
         transform: translateX(50px);
     }
-
     .header-li:hover {
         color: #0e08b8;
     }
-
     .header-ul a:nth-child(-n+4)::after {
         display: none;
     }
-    
     .header-nav {
         top: 0;
         right: 0;
@@ -1499,17 +1489,14 @@ footer {
         z-index: 2;
         border-left: 1px solid rgba(0, 0, 0, 0.363);
     }
-
     .header-ul {
         flex-direction: column;
         justify-content: space-around;
         height: 100%;
     }
-
     .header-ul li {
         margin: 0;
     }
-
     .banner-titulo {
         font-size: 35px;
         line-height: 35px;
@@ -1551,6 +1538,7 @@ footer {
     }
     .modal-content {
         margin-bottom: 10px;
+        margin-right: 15px;
     }
     .square-middle{
         flex-direction: column;
@@ -1559,6 +1547,8 @@ footer {
     }
     .square-bottom {
         justify-content: center;
+        margin-bottom: 15px;
+        
     }
     .square-bottom a {
         width: 200px;
@@ -1631,7 +1621,6 @@ footer {
     .scrollTop.active {
         transform: translateX(0px);
     }
-
     .servicos-cards {
         grid-template-columns: 48% 48%;
         gap: 3px;
@@ -1704,6 +1693,10 @@ footer {
         height: 350px;
         padding: 5px;
     }
+    .modal-content {
+        margin-right: 0;
+    }
+
     .sm-div-mbl {
         text-align: center;
     }

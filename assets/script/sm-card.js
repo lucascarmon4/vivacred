@@ -1,5 +1,6 @@
 let sCards = document.querySelectorAll('.servicos-card');
 
+
 for (let i = 0; i < sCards.length; i++) {
     const sCard = sCards[i];
     let saibaMais = sCard.querySelector('.sm-div');
@@ -10,4 +11,5 @@ for (let i = 0; i < sCards.length; i++) {
         saibaMais.classList.remove('sm-div-show');
     })
 }
+
 
