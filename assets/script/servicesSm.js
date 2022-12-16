@@ -1,8 +1,5 @@
 let links = document.querySelectorAll('.selectLink');
-
-
-
-
+window.addEventListener('load', evt(window.innerWidth));
 let square1 = document.querySelector('.square1');
 let square2 = document.querySelector('.square2');
 let square3 = document.querySelector('.square3');
@@ -55,23 +52,39 @@ for (let i = 0; i < links.length; i++) {
 }
 
 
-
-window.addEventListener('load', () => {
-    let tela = window.innerWidth;
+window.addEventListener('resize', () => {
+    const tela = window.innerWidth;
+    if(tela <= 900) {
         sCards.forEach((sCard) => {
-            sCard.style.cursor = 'pointer';
-            if(tela <= 900) {
-                sCard.addEventListener('click', (e) => {
-                   checkCard(e.target);
-                });
-            }
-            else {
-                sCard.style.cursor = 'default';
-
-            }
-        }) 
+            sCard.classList.add('s-card-pointer');
+            sCard.addEventListener('click', (e) => {
+                checkCardOpenMobile(e.target);
+            });
+        })
+    }
+    else {
+        sCards.forEach((sCard) => {
+            sCard.classList.remove('s-card-pointer');
+            sCard.addEventListener('click', () => {
+                // COLOCAR PARA ABRIR SOMENTE SE CLICAR NO SAIBA MAIS 
+            })
+        })
+    }
 })
 
+function evt(tela){
+    sCards.forEach((sCard) => {
+        if(tela <= 900) {
+            sCard.classList.add('s-card-pointer');
+            sCard.addEventListener('click', (e) => {
+                checkCardOpenMobile(e.target);
+            });
+        }
+        if(tela > 900) {
+            sCard.classList.remove('s-card-pointer');
+        }
+    }) 
+}
 
 function openSquare(square) {
     divSquares.classList.remove('hidden');
@@ -94,7 +107,7 @@ function closeSquare(square) {
     }, 500)
 }
 
-function checkCard(target) {
+function checkCardOpenMobile(target) {
     if (target.id == 'link1' || target.parentNode.id == 'link1' || target.parentNode.parentNode.id == 'link1'){
         openSquare(square1);
     }
@@ -113,7 +126,6 @@ function checkCard(target) {
     if (target.id == 'link6' || target.parentNode.id == 'link6' || target.parentNode.parentNode.id == 'link6'){
         openSquare(square6);
     }
-
     
     divSquares.addEventListener('click', (event) => {
         const clicked = event.target;
@@ -128,5 +140,25 @@ function checkCard(target) {
     })
 }
 
+function checkCardShowDiv() {
+    if (target.id == 'link1' || target.parentNode.id == 'link1' || target.parentNode.parentNode.id == 'link1'){
+        openSquare(square1);
+    }
+    if (target.id == 'link2' || target.parentNode.id == 'link2' || target.parentNode.parentNode.id == 'link2'){
+        openSquare(square2);
+    }
+    if (target.id == 'link3' || target.parentNode.id == 'link3' || target.parentNode.parentNode.id == 'link3'){
+        openSquare(square3);
+    }
+    if (target.id == 'link4' || target.parentNode.id == 'link4' || target.parentNode.parentNode.id == 'link4'){
+        openSquare(square4);
+    }
+    if (target.id == 'link5' || target.parentNode.id == 'link5' || target.parentNode.parentNode.id == 'link5'){
+        openSquare(square5);
+    }
+    if (target.id == 'link6' || target.parentNode.id == 'link6' || target.parentNode.parentNode.id == 'link6'){
+        openSquare(square6);
+    }
+}
 
 

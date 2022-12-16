@@ -286,20 +286,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
     cursor:default;
+    z-index: 3;
 }
 
 .sm-div {
-    opacity: 0;
-    padding-left: 180px;
-    transition: .5s all;
-    transform: translateX(-80px) scale(0.5);
     width: 100%;
 }
 
-.sm-div-show {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-}
+
 
 .sm-div-mbl {
     display: none;
@@ -316,6 +310,17 @@ body {
     text-decoration: none;
     transition: .3s all;
     cursor: pointer;
+}
+
+.sm-div-link {
+    width: 88px;
+    opacity: 0;
+    transform: translateX(0) scale(0);
+    transition: .5s all;
+}
+
+.sm-link-show {
+    opacity: 1;
 }
 
 .sm-link {
@@ -342,6 +347,10 @@ body {
 
 .s-card-p {
     font-family: os-light;
+}
+
+.s-card-pointer {
+    cursor: pointer;
 }
 
 /* modal saibamais */
@@ -1244,9 +1253,6 @@ footer {
 
 
 @media (max-width: 1580px) {
-    .sm-div-show{
-        transform: translateX(-50px);
-    }
     .sm-link {
         font-size: 14px;
     }
@@ -1303,18 +1309,6 @@ footer {
     }
     .servicos-card {
         max-width: 100%;
-    }
-    .sm-div {
-        opacity: 0;
-        padding-left: 180px;
-        transition: .5s all;
-        transform: translateX(-120px) scale(0.5);
-        width: 100%;
-    }
-    
-    .sm-div-show {
-        opacity: 1;
-        transform: translateX(-20px) scale(1);
     }
     .sm-link {
         font-size: 14px;
