@@ -409,28 +409,23 @@
             </div>
             <div class="ctt2-form">
                 <h1 class="form-titulo">fale conosco</h1>
-                <form class="form" action="https://api.staticforms.xyz/submit" method="post">
-                    <input type="hidden" name="accessKey" value="48e403bd-0669-4628-b4b1-0eba8e9e7993">
-                    <input type="hidden" name="subject" value="Contato via site - VivaCred"/>
-                    <input type="hidden" name="redirectTo" value="">
-
-                    <label for="name" class="form-label">NOME</label>
-                    <input placeholder="Digite seu nome" id="nome" name="name" type="text" class="form-input" placeholder="">
+                <form class="form" action="mailto:atendimento@vivacredpg.com.br" method="POST" enctype="text/plain">
+                    <label for="Nome" class="form-label">NOME</label>
+                    <input placeholder="Digite seu nome" id="nome" name="Nome" type="text" class="form-input" placeholder="">
                     <div class="cpf-phone">
                         <div class="div-cpf">
-                            <label for="$cpf" class="form-label cpf-phone--label">CPF</label>
-                            <input id="cpf" name="$cpf" type="text" class="form-input cpf-phone--input" placeholder="000.000.000-00" data-mask="000.000.000-00">
+                            <label for="Cpf" class="form-label cpf-phone--label">CPF</label>
+                            <input id="cpf" name="Cpf" type="text" class="form-input cpf-phone--input" placeholder="000.000.000-00" data-mask="000.000.000-00">
                         </div>
                         <div class="div-phone">
-                            <label for="phone" class="form-label cpf-phone--label">TELEFONE</label>
-                            <input id="telefone" name="phone" type="text" class="form-input cpf-phone--input" placeholder="(00) 00000-0000" data-mask="(00) 00000-0000">
+                            <label for="Telefone" class="form-label cpf-phone--label">TELEFONE</label>
+                            <input id="telefone" name="Telefone" type="text" class="form-input cpf-phone--input" placeholder="(00) 00000-0000" data-mask="(00) 00000-0000">
                         </div>
                     </div>
-                    <label for="email" class="form-label">EMAIL</label>
-                    <input id="email" name="email" type="text" class="form-input" placeholder="exemplo@gmail.com">
-                    <label for="subject" class="form-label mensagem">MENSAGEM</label>
-                    <textarea id="mensagem" name="message" id="" cols="30" rows="10" class="form-input mensagem-input" placeholder="Digite sua mensagem"></textarea>
-                    <input type="text" name="honeypot" style="display: none;">
+                    <label for="Email" class="form-label">EMAIL</label>
+                    <input id="email" name="Email" type="text" class="form-input" placeholder="exemplo@gmail.com">
+                    <label for="Mensagem" class="form-label mensagem">MENSAGEM</label>
+                    <textarea id="mensagem" name="Mensagem" id="" cols="30" rows="10" class="form-input mensagem-input" placeholder="Digite sua mensagem"></textarea>
                     <button id="submit-botao" type="submit" class="form-botao">Enviar</button>
                 </form>
             </div>
