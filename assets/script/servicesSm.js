@@ -35,8 +35,10 @@ for (let i = 0; i < links.length; i++) {
         if (clicked.id == 'link6') {
             openSquare(square6);
         }
-        ///FECHAR MODAL
 
+
+
+        ///FECHAR MODAL
         divSquares.addEventListener('click', (event) => {
             const clicked = event.target;
             if (clicked.className == 'div-squares' || clicked.className == 'square-x' || clicked.id == 'close1' || clicked.id == 'close2') {
@@ -57,18 +59,10 @@ window.addEventListener('resize', () => {
     if(tela <= 900) {
         sCards.forEach((sCard) => {
             sCard.classList.add('s-card-pointer');
-            sCard.addEventListener('click', (e) => {
-                checkCardOpenMobile(e.target);
-            });
+            sCard.addEventListener('click', (e) => { checkCardOpenMobile(e.target)});
         })
-    }
-    else {
-        sCards.forEach((sCard) => {
-            sCard.classList.remove('s-card-pointer');
-            sCard.addEventListener('click', () => {
-                // COLOCAR PARA ABRIR SOMENTE SE CLICAR NO SAIBA MAIS 
-            })
-        })
+    } else {
+        sCards.forEach((sCard) => {sCard.classList.remove('s-card-pointer')});
     }
 })
 
