@@ -1050,6 +1050,7 @@ body {
     max-height: 0;
     opacity: 0;
     transition: 200ms max-height, 200ms opacity;
+    padding-left: 20px;
 
 }
 
@@ -1058,6 +1059,7 @@ body {
     opacity: 1;
     max-height: 100px;
     transition: 200ms max-height, 200ms opacity;
+
 }
 
 @keyframes resposta {
@@ -1607,6 +1609,7 @@ footer {
     }
     .duvidas-resposta {
         font-size: 16px;
+        padding-left: 10px;
     }
     .scrollTop.active {
         transform: translateX(0px);
