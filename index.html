@@ -527,20 +527,13 @@
     </footer>
     <div class="footer-copy">Todos os direitos reservados &copy; 2022</div>
     <button class="scrollTop">
-        <img src="assets/img/arrow-up-solid.svg" alt="">
+        <a href="#header"><img src="assets/img/arrow-up-solid.svg" alt=""></a>
     </button>
     <script>
         let scroll = document.querySelector('.scrollTop');
         window.addEventListener("scroll", function() {
             scroll.classList.toggle('active', window.scrollY > 680);
         })
-        function backTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            })
-        }
-        scroll.addEventListener("click", backTop);
     </script>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
