@@ -1,38 +1,38 @@
 @font-face {
     font-family: montserrat;
-    src: url('/assets/fonts/Montserrat-Regular.ttf');
+    src: url('../fonts/Montserrat-Regular.ttf');
 }
 @font-face {
     font-family: cocogoose;
-    src: url('/assets/fonts/Cocogoose.ttf');
+    src: url('../fonts/Cocogoose.ttf');
 }
 @font-face {
     font-family: aspas;
-    src: url('/assets/fonts/Lemon\ Brownies.ttf');
+    src: url('../fonts/Lemon\ Brownies.ttf');
 }
 @font-face {
     font-family: os-light;
-    src: url('/assets/fonts/OpenSans-Light.ttf');
+    src: url('../fonts/OpenSans-Light.ttf');
 }
 @font-face {
     font-family: os-regular;
-    src: url('/assets/fonts/OpenSans-Regular.ttf');
+    src: url('../fonts/OpenSans-Regular.ttf');
 }
 @font-face {
     font-family: os-italic;
-    src: url('/assets/fonts/OpenSans-Italic.ttf');
+    src: url('../fonts/OpenSans-Italic.ttf');
 }
 @font-face {
     font-family: montserrat-light;
-    src: url('/assets/fonts/Montserrat-Light.ttf');
+    src: url('../fonts/Montserrat-Light.ttf');
 }
 @font-face {
     font-family: inter;
-    src: url('/assets/fonts/Inter-Black.ttf');
+    src: url('../fonts/Inter-Black.ttf');
 }
 @font-face {
     font-family: inter-bold;
-    src: url('/assets/fonts/Inter-Bold.ttf');
+    src: url('../fonts/Inter-Bold.ttf');
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
@@ -750,7 +750,7 @@ body {
 }
 
 .ctt-adress::before {
-    background-image: url('/assets/img/Contato/flat-icon.gif');
+    background-image: url('../img/Contato/flat-icon.gif');
     background-size: 15px 15px;
     display: inline-block;
     width: 15px; 
@@ -767,7 +767,7 @@ body {
 }
 
 .ctt-phone::before {
-    background-image: url('/assets/img/Contato/telefone.gif');
+    background-image: url('../img/Contato/telefone.gif');
     background-size: 15px 15px;
     display: inline-block;
     width: 15px; 
@@ -790,7 +790,7 @@ body {
 }
 
 .ctt-legend::before {
-    background-image: url('/assets/img/Contato/relogio.gif');
+    background-image: url('../img/Contato/relogio.gif');
     background-size: 13px 13px;
     display: inline-block;
     width: 13px; 
@@ -1099,7 +1099,7 @@ body {
 }
 
 .duvidas-arrow {
-    background-image: url('/assets/img/fi-rr-angle-small-down.svg');
+    background-image: url('../img/fi-rr-angle-small-down.svg');
     width: 30px; 
     height: 23px;
     margin-bottom: 5px;
